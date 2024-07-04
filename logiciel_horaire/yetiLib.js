@@ -13,6 +13,7 @@ const yetiLib = {
     return new Promise((resolve, reject) => {
       const input = document.createElement('input');
       input.type = 'file';
+      input.accept = 'application/JSON';
       input.onchange = () => {
         let file = Array.from(input.files)[0];
         let fr = new FileReader();
